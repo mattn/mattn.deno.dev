@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/x/sift@0.1.6/mod.ts";
+import page from "./components/page.jsx";
 
 serve({
-  "/": () => new Response("デノ", {headers: {"content-type": "text/html; charset=utf-8"}}),
-  404: () => new Response("ありまへん", {headers: {"content-type": "text/html; charset=utf-8"}}),
+  "/": () => page("デノ", "デノ"),
+  404: () => page("デノ", "ありまへん"),
 });
