@@ -22,5 +22,8 @@ ${body}
 
 serve({
   "/": () => page("デノ", "デノ"),
+  "/install": () => {
+    return new Response('', {"headers": {"content-type": "text/css; charset=utf-8"}});
+  },
   404: () => page("デノ", "ありまへん"),
 });
