@@ -108,7 +108,7 @@ const faces = [
 serve({
   "/": () => page("デノ", "デノ"),
   "/install": () => {
-    return new Response(faces[Math.floor(Math.random() * faces.length)], {"headers": {"content-type": "text/css; charset=utf-8"}});
+    return new Response(`echo "${faces[Math.floor(Math.random() * faces.length)]}"`, {"headers": {"content-type": "text/css; charset=utf-8"}});
   },
   404: () => page("デノ", "ありまへん"),
 });
